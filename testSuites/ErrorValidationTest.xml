@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners >
+        <listener class-name="org.dalvarez.testcomponents.Listener" />
+    </listeners >
+    <groups>
+        <run>
+            <include name="ErrorHandling" />
+        </run>
+    </groups>
+    <test thread-count="5" name="Submit Order">
+        <classes>
+            <class name="org.dalvarez.tests.SubmitOrderTest"/>
+        </classes>
+    </test>
+    <test thread-count="5" name="Error validations test">
+        <classes>
+            <class name="org.dalvarez.tests.ErrorValidationsTest"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
